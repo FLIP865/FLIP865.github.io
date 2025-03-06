@@ -30,5 +30,35 @@
 
 .video-text {
   color: aquamarine;
+  font-size: 3rem;
+  text-aligin: center;
   z-index: 2;
+}
+
+.typing-text {
+  display: inline-block; /* Ограничиваем ширину текста */
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 4px solid aquamarine;
+  animation: 
+    typing 3.5s steps(22, end) forwards, /* Набор текста */
+    blink 0.75s step-end infinite; /* Мигание курсора */
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blink {
+  from, to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: aquamarine;
+  }
 }
